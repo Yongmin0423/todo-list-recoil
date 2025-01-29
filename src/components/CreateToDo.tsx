@@ -12,7 +12,7 @@ function CreateToDo() {
   const { register, handleSubmit, setValue } = useForm<IForm>();
   const handleValid = ({ toDo }: IForm) => {
     setToDos((oldToDos) => [
-      { text: toDo, id: Date.now(), category },
+      { text: toDo, id: Date.now(), category: category[0] },
       ...oldToDos,
     ]);
     setValue("toDo", "");
